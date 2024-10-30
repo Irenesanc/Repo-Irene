@@ -25,7 +25,7 @@ while True:
         elif command=="withdraw":
             amount= float(input("Please enter the amount you want to withdraw of your account: "))
             account.withdraw(amount)
-            if amount > account.get_balance():
+            if amount < account.get_balance():
                 print(f"You have withdraw {amount} euros from your account. New balance: {account.get_balance()} euros.")
             else:
                 print("Funds are insufficient.")
